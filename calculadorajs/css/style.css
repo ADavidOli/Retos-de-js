@@ -37,9 +37,8 @@ body{
 
 
 .calculadora{
-    height: 40vh;
     background-color: white;
-    width: 25rem;
+    width: 17rem;
     border: 3px solid var(--contorno);
     border-radius: 1rem;
     padding: 1rem;
