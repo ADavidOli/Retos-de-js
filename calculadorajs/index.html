@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <div class="calculadora">
+            <div class="inputs">
+                <input class="inputNumerador" id="input" type="text" placeholder="valores de la calculadora" disabled>
+                <input class="inputOperador" id="Operador" type="text" disabled>
+            </div>
+
+            <div class="operandos">
+                <button class="btn operando" value="+">+</button>
+                <button class="btn operando" value="-">-</button>
+                <button class="btn operando" value="/">/</button>
+                <button class="btn operando" value="x">X</button>
+            </div>
+            <div class="botones">
+                <button class="btn numero" value="1">1</button>
+                <button class="btn numero" value="2">2</button>
+                <button class="btn numero" value="3">3</button>
+                <button class="btn numero" value="4">4</button>
+                <button class="btn numero" value="5">5</button>
+                <button class="btn numero" value="6">6</button>
+                <button class="btn numero" value="7">7</button>
+                <button class="btn numero" value="8">8</button>
+                <button class="btn numero" value="9">9</button>
+                <button class="btn numero" value="0">0</button>
+                <button class="btn" id="AC">AC</button>
+                <button class="btn" id="igual">=</button>
+            </div>
+        </div>
+        <div class="historial">
+            <h3>Historial</h3>
+            <div class="lista-historial" id="historial"></div>
+        </div>
+    </main>
+
+
+</body>
+<script src="/js/app.js"></script>
+
+</html>

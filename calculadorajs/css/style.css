@@ -1,0 +1,126 @@
+:root{
+    --base: #2b7d7d;
+    --actions: #40d990;	
+    --hove: #0e2b34;
+    --contorno: #89edf7;	
+    --aux: #062549;
+}
+
+body{
+    background-color: var(--base);
+    font-family: Arial, sans-serif;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.historial {
+    width: 17rem;
+    background-color: #0e2b34;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    height: 50vh;
+    margin: 1rem;
+    overflow-y: auto; 
+}
+.historial h3{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0; 
+}
+
+
+.calculadora{
+    background-color: white;
+    width: 17rem;
+    border: 3px solid var(--contorno);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+.inputs{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.inputNumerador{
+    flex: 3;
+}
+
+.inputOperador{
+    flex: 1;
+}
+
+.inputNumerador, 
+.inputOperador{
+    min-width: 0;
+    text-align: center;
+    padding: 0.4rem;
+    border: 2px solid var(--contorno);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: #e8f9fc;
+    font-weight: bold;
+}
+
+
+.operandos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.operando{
+    background-color: var(--actions);
+    color: black;
+    font-weight: bold;
+}
+
+
+.botones{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+}
+
+.btn{
+    padding: 0.7rem;
+    background-color: var(--aux);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover{
+    background-color: var(--hove);
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+
+#igual{
+    background-color: var(--actions);
+    color: black;
+    font-weight: bold;
+}
+
+#AC{
+    background-color: crimson;
+    font-weight: bold;
+}
