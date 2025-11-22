@@ -20,13 +20,13 @@ body{
 }
 
 .historial {
-    width: 17rem;
+    width: 20rem;
     background-color: #0e2b34;
     padding: 1rem;
     border-radius: 10px;
     color: white;
-    height: 50vh;
-    margin: 1rem;
+    height: 40vh;
+    margin-left: 1rem;
     overflow-y: auto; 
 }
 .historial h3{
@@ -37,8 +37,9 @@ body{
 
 
 .calculadora{
+    height: 40vh;
     background-color: white;
-    width: 17rem;
+    width: 25rem;
     border: 3px solid var(--contorno);
     border-radius: 1rem;
     padding: 1rem;
