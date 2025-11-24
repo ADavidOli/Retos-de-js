@@ -27,13 +27,21 @@ body{
     color: white;
     height: 40vh;
     margin-left: 1rem;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
-.historial h3{
+
+.historial h3 {
     text-align: center;
     font-size: 2rem;
-    margin: 0; 
+    margin: 1rem;
 }
+
+.operacion {
+    color: rgba(64, 217, 144, 0.5);
+    margin: 0 0 0 1rem;
+}
+
+
 
 
 .calculadora{

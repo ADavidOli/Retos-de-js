@@ -64,15 +64,25 @@ document.querySelector("#igual").addEventListener("click", () => {
   // el metodo recibe operador, el primer numero y el segundo numero
   let resultado = operar(primerNumero, segundoNumero, operador);
   // mandamos el resultado a nuestro input
+
   input.value = resultado;
-  recabarHistorial(resultado);
+
+  // mandamos nuestro resultado a nuestro historial
+  let historial = [primerNumero, segundoNumero, operador]
+  recabarHistorial(historial, resultado);
 
   // para poder multiplicar cada vez que precionamos igual
   // el primer numero le guardamos la variable de resultado
   // el segundo numero ya está guardado así que seguira multiplicando por el primer numero
   primerNumero = resultado;
   numeroActual = "";
+  // automaticamente se manda el primer numero
+  // no puede ir aqui la funcion porque es mutabilidad en variable
+  
 });
+
+
+
 
 function operar(a, b, operador) {
   switch (operador) {
@@ -89,12 +99,18 @@ function operar(a, b, operador) {
   }
 }
 // crear elementos con apendchild
-function recabarHistorial(resultado) {
+function recabarHistorial(array, resultado) {
+
+  // console.log(array);
+
+  const [primero, segundo, operador] = array;
+  // console.log(resultado);
+
+  // buscamos el almacen donde vamos a crear el elemento html
   const almacen = document.querySelector("#historial");
   const p = document.createElement("P");
-  p.classList.add("concepto");
-  p.textContent = resultado;
-
+  p.classList.add("operacion");
+  p.textContent = `${primero} ${operador} ${segundo} = ${resultado}`;
   almacen.appendChild(p);
 }
 // tambien se puede hacer con innerhtml
