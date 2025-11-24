@@ -31,6 +31,7 @@ botonesNumeros.forEach((btn) => {
 del.addEventListener("click", () => {
   if (numeroActual === "" && primerNumero === null) return;
   if(numeroActual !== ""){
+    // metodos de string "slice es para borrar algun caracter"
     numeroActual = numeroActual.slice(0, -1);
     input.value = numeroActual;
   }
@@ -45,6 +46,7 @@ botonesOperandos.forEach((btn) => {
     // si numero actual es diferente a vacio
     // entonces escribimos como primer numero el numero actual
     if (numeroActual !== "") {
+      // metodo de casting de variable****
       primerNumero = Number(numeroActual);
     }
 
@@ -107,6 +109,7 @@ function operar(a, b, operador) {
 function recabarHistorial(array, resultado) {
   // console.log(array);
 
+  // destructuring -> sintaxis de un arreglo
   const [primero, segundo, operador] = array;
   // console.log(resultado);
 
