@@ -3,6 +3,7 @@ const botonesOperandos = document.querySelectorAll(".operando");
 const input = document.querySelector("#input");
 const inputOperador = document.querySelector("#Operador");
 const reset = document.querySelector("#AC");
+const del = document.querySelector("#Del");
 
 let numeroActual = "";
 let primerNumero = null;
@@ -27,13 +28,21 @@ botonesNumeros.forEach((btn) => {
   });
 });
 
+del.addEventListener("click", () => {
+  if (numeroActual === "" && primerNumero === null) return;
+  if(numeroActual !== ""){
+    numeroActual = numeroActual.slice(0, -1);
+    input.value = numeroActual;
+  }
+});
+
 botonesOperandos.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     // Si acabamos de obtener un resultado, numeroActual estará vacío
     // pero primerNumero sí tendrá valor. Eso es válido.
     if (numeroActual === "" && primerNumero === null) return;
 
-    // si numero actual es diferente a vacio 
+    // si numero actual es diferente a vacio
     // entonces escribimos como primer numero el numero actual
     if (numeroActual !== "") {
       primerNumero = Number(numeroActual);
@@ -68,7 +77,7 @@ document.querySelector("#igual").addEventListener("click", () => {
   input.value = resultado;
 
   // mandamos nuestro resultado a nuestro historial
-  let historial = [primerNumero, segundoNumero, operador]
+  let historial = [primerNumero, segundoNumero, operador];
   recabarHistorial(historial, resultado);
 
   // para poder multiplicar cada vez que precionamos igual
@@ -78,11 +87,7 @@ document.querySelector("#igual").addEventListener("click", () => {
   numeroActual = "";
   // automaticamente se manda el primer numero
   // no puede ir aqui la funcion porque es mutabilidad en variable
-  
 });
-
-
-
 
 function operar(a, b, operador) {
   switch (operador) {
@@ -100,7 +105,6 @@ function operar(a, b, operador) {
 }
 // crear elementos con apendchild
 function recabarHistorial(array, resultado) {
-
   // console.log(array);
 
   const [primero, segundo, operador] = array;

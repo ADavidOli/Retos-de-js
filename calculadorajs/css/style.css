@@ -131,4 +131,12 @@ body{
 #AC{
     background-color: crimson;
     font-weight: bold;
+    text-transform: uppercase;
 }
+
+#Del{
+    background-color: #2b7d7d;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
