@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contador con js</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
 
-    </header>
+<body>
     <main class="Contador-Main">
         <div class="contenedor">
             <h3>
                 contador basico con js html y class
             </h3>
             <div class="resultado">
-                <p class="contenido" id="numero"></p>
-            </div>
-            <div class="operandos">
-                <button class="btn" id="aumento">+</button>
-                <button class="btn" id="minuendo">-</button>
-                <button class="btn-reset" id="reset">Resetear contador</button>
-                <button class="btn-guardar" id="guardar">Guardar Cantidad</button>
-            </div>            
-        </div>
-        <div class="historial"></div>
-    </main>
-    <footer>
+                <button class="btn-lateral" id="minuendo">-</button>
 
-    </footer>
-    
+                <p class="numeros">0</p>
+
+                <button class="btn-lateral" id="aumento">+</button>
+            </div>
+
+            <div class="botones-abajo">
+                <button class="btn btn-reset" id="reset">Resetear</button>
+                <button class="btn btn-guardar" id="guardar">Guardar cantidad</button>
+            </div>
+
+        </div>
+        <div class="historial" id="historial">
+
+        </div>
+    </main>
 </body>
 
 <script src="js/app.js"></script>
+
 </html>
