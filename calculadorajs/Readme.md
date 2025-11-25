@@ -18,9 +18,9 @@ Este mini proyecto es una calculadora basica hecha con javascript, html, y hoja 
 ![alt text](image.png)
 
 ## como usar
-1.- puedes utilizar open live server, el cual desde tu index.html ejecuta una instancia de servidor web con el puerto 5500
-2.- dirigite a la url local de tu equipo bajo el puerto 5500.
-3.- listo, puedes usar la calculadora.
+1. puedes utilizar open live server, el cual desde tu index.html ejecuta una instancia de servidor web con el puerto 5500
+2. dirigite a la url local de tu equipo bajo el puerto 5500.
+3. listo, puedes usar la calculadora.
 
 ## licencia
 Este miniproyecto es de uso libre.
