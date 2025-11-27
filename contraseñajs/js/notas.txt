@@ -1,0 +1,22 @@
+// usar getrandomvalue para contraseñas***
+// creamos un arreglo aux  vacío con un espacio de 6 indices
+const aux = new Uint8Array(6); 
+console.log(aux);
+self.crypto.getRandomValues(aux); //tenemos que llenar el arreglo con datos para poder llenarlo con string
+
+console.log(aux);
+
+let caracteres = "abcdefghijklmnopqrstuvwxyz"; //tenemos una cadena de caracteres con longitud N
+let password = ""; //y un string vacío.
+
+for (let i = 0; i < 6; i++) {
+    // le asignamos a password que es igual
+    // a la concatenacion de caracteres, eso el residuo de lo que está adentro de aux (valores random) entre 
+    // la longitud de nuestra cadena de caracteres
+    password = password + caracteres[aux[i] % caracteres.length];
+  //password += caracteres[aux[i] % caracteres.length ];
+   
+  //demostracion de la impresion de los valores dentro del arreglo aux
+//   password += aux[i];
+}
+console.log(password);

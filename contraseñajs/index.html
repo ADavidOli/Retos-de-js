@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de contraseña js</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="contraseña">
+        <div class="contenedor">
+            <h2 class="titulo">tu contraseña generada con JS</h2>
+            <p class="parrafo" id="resultado"></p>
+            <div class="control">
+                <div class="parametros">
+                    <div class="parametros-titulo">
+                        <h3 class="subtitulo">¿Que debe contener tu contraseña?</h3>
+                    </div>
+                    <div class="parametros-opciones">
+                        <label for="min">minusculas</label>
+                        <input type="checkbox" id="min" value="minusculas" name="parametros">
+
+                        <label for="max">mayusculas</label>
+                        <input type="checkbox" id="max" value="mayusculas" name="parametros">
+
+                        <label for="num">numeros</label>
+                        <input type="checkbox" id="num" value="numeros" name="parametros">
+
+                        <label for="sig">signos</label>
+                        <input type="checkbox" id="sig" value="signos" name="parametros">
+                    </div>
+                    <div class="scrollbar">
+                        <label for="long">Longitud de la contraseña</label>
+                        <input type="range" id="long" min="4" max="20" value="0" name="parametros">
+                    </div>
+                </div>
+                <button id="generar">Generar contraseña</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/app.js"></script>
+
+</html>
