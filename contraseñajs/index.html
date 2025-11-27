@@ -15,28 +15,38 @@
             <p class="parrafo" id="resultado"></p>
             <div class="control">
                 <div class="parametros">
-                    <div class="parametros-titulo">
-                        <h3 class="subtitulo">¿Que debe contener tu contraseña?</h3>
+                    <h3 class="subtitulo">¿Que debe contener tu contraseña?</h3>
+                    <div class="opciones">
+
+                        <div class="opcion">
+                            <label for="min">Minúsculas</label>
+                            <input type="checkbox" id="min" name="parametros" value="minusculas">
+                        </div>
+
+                        <div class="opcion">
+                            <label for="max">Mayúsculas</label>
+                            <input type="checkbox" id="max" name="parametros" value="mayusculas">
+                        </div>
+
+                        <div class="opcion">
+                            <label for="num">Números</label>
+                            <input type="checkbox" id="num" name="parametros" value="numeros">
+                        </div>
+
+                        <div class="opcion">
+                            <label for="sig">Signos</label>
+                            <input type="checkbox" id="sig" name="parametros" value="signos">
+                        </div>
+
                     </div>
-                    <div class="parametros-opciones">
-                        <label for="min">minusculas</label>
-                        <input type="checkbox" id="min" value="minusculas" name="parametros">
 
-                        <label for="max">mayusculas</label>
-                        <input type="checkbox" id="max" value="mayusculas" name="parametros">
-
-                        <label for="num">numeros</label>
-                        <input type="checkbox" id="num" value="numeros" name="parametros">
-
-                        <label for="sig">signos</label>
-                        <input type="checkbox" id="sig" value="signos" name="parametros">
-                    </div>
                     <div class="scrollbar">
                         <label for="long">Longitud de la contraseña</label>
                         <input type="range" id="long" min="4" max="20" value="0" name="parametros">
+                        <p class="valor" id="valor">8</p>
                     </div>
                 </div>
-                <button id="generar">Generar contraseña</button>
+                <button class="btn" id="generar">Generar contraseña</button>
             </div>
         </div>
     </main>
