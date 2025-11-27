@@ -9,6 +9,7 @@ const long = document.querySelector("#long");
 
 // segundo definimos nuestras variables.
 
+
 let mins = "abcdefghijklmnñopqrstuvwxyz";
 let mayus = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 let signos = "!#$%&/7(=?¡¿-_.~}";
