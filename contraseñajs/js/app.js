@@ -6,10 +6,11 @@ const max = document.querySelector("#max");
 const sig = document.querySelector("#sig");
 const num = document.querySelector("#num");
 const long = document.querySelector("#long");
+const valor = document.querySelector("#valor");
+
+valor.textContent = long.value;
 
 // segundo definimos nuestras variables.
-
-
 let mins = "abcdefghijklmnñopqrstuvwxyz";
 let mayus = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 let signos = "!#$%&/7(=?¡¿-_.~}";
@@ -24,7 +25,7 @@ btn.addEventListener("click", () => {
   if (sig.checked) campos += signos;
   // si campo está vacío quiere decir que no se selecciono ninguno.
   if (campos.length === 0) {
-    resultado.textContent = "debes de poner al menos un parametro"
+    resultado.textContent = "debes de poner al menos un parametro";
     return;
   }
   let password = "";
@@ -43,6 +44,11 @@ btn.addEventListener("click", () => {
   llenarCampo(password);
 });
 
-function llenarCampo(string){
-    resultado.textContent = string;
+// funcion para llenar el campo P
+function llenarCampo(string) {
+  resultado.textContent = string;
 }
+
+long.addEventListener("input", () => {
+  valor.textContent = long.value;
+});
