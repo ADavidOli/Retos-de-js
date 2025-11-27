@@ -1,0 +1,173 @@
+:root{
+    --azul: #0046FF;
+    --menta: #73C8D2;
+    --crema: #F5F1DC;
+    --naranja: #FF9013;
+    --gris: #E0D9D9;
+    --blanco: #ffffff;
+}
+body{
+    background-color: var(--gris);
+}
+
+.contraseña{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor{
+    background-color: var(--crema);
+    border: 2px solid var(--naranja);
+    border-radius: 2rem;
+    height: 30rem;
+    width: 30rem;
+}
+
+.contenedor h2{
+    color: var(--azul);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.parrafo{
+    border: 1px solid var(--naranja);
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    height: 2rem;
+    background-color: var(--blanco);
+
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control{
+    margin: 1rem;
+    border: 1px solid var(--naranja);
+    border-radius: 1rem;
+    
+    height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    width: 10rem;
+    height: 2rem;
+    background-color: var(--azul);
+    color: var(--blanco);
+    border-radius: 2rem;
+}
+
+.btn:hover{
+    background-color: var(--menta);
+}
+
+.parametros{
+    margin: 1rem;
+    height: 15rem;
+}
+
+.opciones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 5rem;
+}
+.opcion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.opcion{
+    margin: 0 1rem 0  0;
+}
+
+.opcion input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--naranja);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--blanco);
+    transition: 0.2s;
+}
+
+.opcion input[type="checkbox"]:checked {
+    background-color: var(--naranja);
+    border-color: var(--naranja);
+}
+
+.opcion input[type="checkbox"]::before {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    transform: scale(0);
+    transition: 0.2s;
+}
+
+.opcion input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+
+.scrollbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.scrollbar label{
+    padding: 1rem;
+}
+/* editar estilos de mi scrollbar */
+#long {
+    /* se ocupa webkit para quitar apariencia y tambien para poder modificar */
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: var(--menta);
+    border-radius: 3px;
+    outline: none;
+}
+
+/* “Barra que se mueve” */
+#long::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: var(--naranja);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--naranja);
+    transition: 0.2s;
+}
+
+#long::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.valor{
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+
