@@ -15,11 +15,12 @@ Se manejo una funcion callback dentro del evento del boton de generar contraseñ
 ## Vista Previa.
 
 - se manejo el caso de que no se haya almacenado ningun checkbox para crear la contraseña
-![alt text](/images/image.png)
+
+![alt text](images/image.png)
 
 - y ya una vez seleccionado ir generando contraseña por contraseña, al igual que una longitud de contraseña
 
-![alt text](/images/image01.png)
+![alt text](images/image01.png)
 
 ## Como usar.
 
