@@ -35,9 +35,25 @@ btn.addEventListener("click", () => {
 });
 
 btnClear.addEventListener("click", () => {
+  const tareasGuardadas = JSON.parse(localStorage.getItem("tareas")) || [];
+  const tareasCompletadas =
+    JSON.parse(localStorage.getItem("completadas")) || [];
+
+  if (tareasGuardadas.length === 0 && tareasCompletadas.length === 0) {
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "<span style='font-size:14px;'>No hay ninguna tarea para eliminar</span>",
+      showConfirmButton: false,
+      width: "220px",
+      timer: 1500,
+    });
+    return;
+  }
+
   Swal.fire({
     title: "¿Estás seguro?",
-    text: "esta accion no se podrá revertir más adelante",
+    text: "perderas todas tus tareas",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
@@ -47,11 +63,10 @@ btnClear.addEventListener("click", () => {
     if (result.isConfirmed) {
       localStorage.clear();
 
-      const tareasGuardadas = [];
-      const tareasCompletadas = [];
+      const tareas = [];
 
-      mostraTareas(tareasGuardadas);
-      mostraTareasCompletas(tareasCompletadas);
+      mostraTareas(tareas);
+      mostraTareasCompletas(tareas);
 
       Swal.fire({
         title: "¡Limpiando!",
@@ -182,7 +197,7 @@ function eliminarTarea(indice) {
 
   Swal.fire({
     title: "¿Estás seguro?",
-    text: "esta accion no se podrá revertir más adelante",
+    text: "eliminar la tarea seleccionada",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
