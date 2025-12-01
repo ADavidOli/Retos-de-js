@@ -43,7 +43,8 @@ btnClear.addEventListener("click", () => {
     Swal.fire({
       position: "top-end",
       icon: "error",
-      title: "<span style='font-size:14px;'>No hay ninguna tarea para eliminar</span>",
+      title:
+        "<span style='font-size:14px;'>No hay ninguna tarea para eliminar</span>",
       showConfirmButton: false,
       width: "220px",
       timer: 1500,
@@ -61,7 +62,8 @@ btnClear.addEventListener("click", () => {
     confirmButtonText: "sí, Limpialo todo",
   }).then((result) => {
     if (result.isConfirmed) {
-      localStorage.clear();
+      localStorage.removeItem("tareas");
+      localStorage.removeItem("completadas");
 
       const tareas = [];
 
@@ -157,6 +159,7 @@ function mostraTareas(lista) {
 
     // agregamos los botones.
     const tdAcciones = document.createElement("td");
+    tdAcciones.classList.add("tdAcciones");
 
     // creamos los botones para luego agregarlos.
     const btnEditar = document.createElement("BUTTON");
@@ -264,7 +267,7 @@ function mostraTareasCompletas(array) {
 
   if (array.length === 0) {
     const p = document.createElement("P");
-    p.classList.add("tarea-vacía");
+    p.classList.add("tarea-vacia");
     p.textContent = "Todavia no has completado ninguna tarea";
     historial.appendChild(p);
     return;
@@ -273,7 +276,7 @@ function mostraTareasCompletas(array) {
   array.forEach((tarea, indice) => {
     const p = document.createElement("P");
     p.classList.add("tarea-completa");
-    p.innerHTML = `${indice + 1}  <span>${tarea}</span>`;
+    p.innerHTML = `Completaste la tarea: <span> ${tarea} </span>`;
     historial.appendChild(p);
   });
 }

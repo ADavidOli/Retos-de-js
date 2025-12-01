@@ -1,0 +1,243 @@
+/* ----------------------------- */
+/*      VARIABLES DE COLOR       */
+/* ----------------------------- */
+:root {
+    --fondo: #1E1F25;
+    --tarjeta: #ffffff;
+    --primario: #3A7AFE;
+    --primario-hover: #2a63d3;
+    --verde: #2ECC71;
+    --verde-hover: #24b863;
+    --rojo: #FF5252;
+    --rojo-hover: #d64545;
+    --grisClaro: #F4F4F4;
+    --grisTexto: #555;
+    --bordeSuave: 14px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--fondo);
+}
+
+/* ----------------------------- */
+/*     LAYOUT PRINCIPAL          */
+/* ----------------------------- */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* -------------------------------- */
+/*      TARJETAS PRINCIPALES        */
+/* -------------------------------- */
+.contenedor,
+.historial {
+    width: 70rem;
+    height: 25rem;
+    background: var(--tarjeta);
+    padding: 1.8rem;
+    border-radius: var(--bordeSuave);
+    box-shadow: 0 6px 20px rgba(0,0,0,.14);
+}
+
+/* TITULOS */
+h3 {
+    font-size: 1.4rem;
+    color: var(--fondo);
+    margin-bottom: 1rem;
+}
+
+/* ----------------------------- */
+/*    INPUT + ACCIONES           */
+/* ----------------------------- */
+.bts-acciones {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.datos {
+    flex-grow: 1;
+    padding: .8rem;
+    background: var(--grisClaro);
+    border: none;
+    border-radius: var(--bordeSuave);
+    font-size: 1rem;
+}
+
+.datos:focus {
+    outline: 2px solid var(--primario);
+}
+
+/* ----------------------------- */
+/*          BOTONES              */
+/* ----------------------------- */
+button {
+    border: none;
+    padding: .75rem 1rem;
+    border-radius: var(--bordeSuave);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botón AGREGAR */
+#agregar {
+    background: var(--primario);
+    color: white;
+}
+
+#agregar:hover {
+    background: var(--primario-hover);
+}
+
+/* Botón LIMPIAR */
+.btn-clear {
+    background: var(--rojo);
+    color: white;
+}
+
+.btn-clear:hover {
+    background: var(--rojo-hover);
+}
+
+/* ----------------------------- */
+/*            TABLA              */
+/* ----------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Encabezado siempre visible */
+.lista-header {
+    background: var(--primario);
+    color: white;
+}
+
+.lista-header th {
+    padding: .8rem;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+/* Cuerpo con scroll */
+.entrada {
+    max-height: 14rem;
+    overflow-y: auto;
+    display: block;
+}
+
+.entrada table {
+    width: 100%;
+}
+
+td {
+    padding: .8rem;
+    border-bottom: 1px solid #ddd;
+    color: var(--grisTexto);
+}
+
+/* Acciones EN FILA */
+.tdAcciones {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+/* Botones dentro de cada fila */
+.acciones {
+    display: flex;
+    gap: .4rem;
+    width: 10rem;
+}
+
+.btn-editar,
+.btn-eliminar,
+.btn-completar {
+    color: white;
+    padding: .4rem .6rem;
+    border-radius: .4rem;
+    font-size: .9rem;
+}
+
+/* Editar */
+.btn-editar {
+    background: var(--primario);
+}
+.btn-editar:hover {
+    background: var(--primario-hover);
+}
+
+/* Eliminar */
+.btn-eliminar {
+    background: var(--rojo);
+}
+.btn-eliminar:hover {
+    background: var(--rojo-hover);
+}
+
+/* Completar */
+.btn-completar {
+    background: var(--verde);
+}
+.btn-completar:hover {
+    background: var(--verde-hover);
+}
+
+/* ----------------------------- */
+/* HISTORIAL SCROLL              */
+/* ----------------------------- */
+.lista-completadas {
+    max-height: 14rem;
+    overflow-y: auto;
+}
+
+/* Tareas completadas */
+.lista-completadas p {
+    background: var(--grisClaro);
+    padding: .8rem;
+    border-radius: .7rem;
+    margin-bottom: .6rem;
+    color: var(--grisTexto);
+}
+
+
+
+/* Texto cuando no hay tareas */
+.tarea-vacia {
+    background: #ffe9e9;
+    padding: .7rem;
+    color: var(--rojo);
+    border-left: 4px solid var(--rojo);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+/* Texto de tarea completada */
+.tarea-completa {
+    background: #e6ffee;
+    color: var(--verde);
+    padding: .8rem;
+    border-left: 4px solid var(--verde);
+    border-radius: .5rem;
+}
+.tarea-completa span{
+    color: var(--primario);
+}
