@@ -125,7 +125,7 @@ table {
 }
 
 /* Encabezado siempre visible */
-.lista-header {
+.lista-header th{
     background: var(--primario);
     color: white;
 }
@@ -194,10 +194,10 @@ td {
 }
 
 /* Completar */
-.btn-completar {
+.btn-Completar {
     background: var(--verde);
 }
-.btn-completar:hover {
+.btn-Completar:hover {
     background: var(--verde-hover);
 }
 
